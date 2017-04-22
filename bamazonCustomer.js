@@ -62,15 +62,15 @@ var placeOrder = function(id,quantity) {
 
     	connection.query("UPDATE products SET stock_quantity=? WHERE item_id=?", [newQuant, id] , function(err, result) {});
 
-    	connection.query(
-  		'SELECT * FROM products',
-  	function (err, res) {
-    	if (err) {
-      	throw err
-    	}
-    	console.log(res);
-  		});
-    	promptForID();
+   //  	connection.query(
+  	// 	'SELECT * FROM products',
+  	// function (err, res) {
+   //  	if (err) {
+   //    	throw err
+   //  	}
+   //  	console.log(res);
+  	// 	});
+   //  	promptForID();
 
     }
     else{
